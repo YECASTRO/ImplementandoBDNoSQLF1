@@ -1,0 +1,252 @@
+use formula1
+db.createCollection("pilotos")
+db.createCollection("equipos")
+db.createCollection("directores")
+db.createCollection("carreras")
+db.createCollection("resultados")
+
+db.pilotos.insert(
+    [
+        {
+            nombre:"Max Verstappen", 
+            fecha_nacimiento: 09-30-1997, 
+            nacionalidad:"Países Bajos", 
+            equipo:"Red Bull Racing"
+        },
+        {
+            nombre:"Sergio Pérez", 
+            fecha_nacimiento: 01-26-1990, 
+            nacionalidad:"Mexicano", 
+            equipo:"Red Bull Racing"
+        },
+        {
+            nombre:"Lando Norris", 
+            fecha_nacimiento: 11-12-1999, 
+            nacionalidad:"Belga", 
+            equipo:"McLaren Racing Limited"
+        },
+        {
+            nombre:"Charles Leclerc", 
+            fecha_nacimiento: 10-16-1997, 
+            nacionalidad:"Monegasco", 
+            equipo:"Ferrari"
+        },
+        {
+            nombre:"Carlos Sainz", 
+            fecha_nacimiento: 09-01-1994, 
+            nacionalidad:"Español", 
+            equipo:"Ferrari"
+        }
+    ]
+)
+
+
+db.equipos.insert(
+    [
+        {
+            nombre: "Red Bull Racing", 
+            directotr: "Christian Edward Johnston Horner", 
+            pilotos: ["Max Verstappen", "Sergio Pérez", "Liam Lawson"], 
+            director_tecnico:"Adrian Newey"
+
+        }, 
+        { 
+            nombre: "McLaren Racing Limited", 
+            directotr: "Zakary Challen Brown", 
+            pilotos: ["Lando Norris", "Oscar Piastri", "Pato O'Ward"], 
+            director_tecnico:"Adrian Newey"}, 
+        {
+            nombre: "Ferrari", 
+            directotr: "Fred Vasseur", 
+            pilotos: ["Charles Leclerc", "Oliver Bearman", "Carlos Sainz"], 
+            director_tecnico:"Enrico Gualteri"
+        }, 
+        { 
+            nombre: "Mercedes-Benz", 
+            directotr: "Torger Christian 'Toto' Wolff", 
+            pilotos: [" Lewis Hamilton", "George Russell"], 
+            director_tecnico:"James Allison"
+        }, 
+        { 
+            nombre: "Aston Martin", 
+            directotr: "Mike Krack", 
+            pilotos: ["Fernando Alonso", "Lance Stroll"], 
+            director_tecnico:"Dan Fallows"
+        }
+    ]
+)
+
+db.directores.insert(
+    [
+        {
+            nombre: "Christian Edward Johnston Horner",
+            fecha_nacimiento: 11-16-1973,
+            nacionalidad: "Britanico";
+            equipo: "Red Bull Racing"
+        }, 
+        {
+            nombre: "Zakary Challen Brown",
+            fecha_nacimiento: 11-07-1971,
+            nacionalidad: "Estadounidense";
+            equipo: "McLaren Racing Limited"
+        }, 
+        {
+            nombre: "Fred Vasseur",
+            fecha_nacimiento: 05-28-1968,
+            nacionalidad: "Frances";
+            equipo: "Ferrari";
+        }, 
+        {
+            nombre: "Torger Christian 'Toto' Wolff",
+            fecha_nacimiento: 01-12-1972,
+            nacionalidad: "Austriaco";
+            equipo: "Mercedes-Benz"
+        }, 
+        {
+            nombre: "Mike Krack",
+            fecha_nacimiento: 03-18-1972,
+            nacionalidad: "Luxemburguesa";
+            equipo: "Aston Martin"
+        }
+    ]
+)
+
+db.carreras.insert(
+    [
+        {
+            nombre: "Gran Premio de Miami 2024", 
+            fecha:	"De 03 al 05 de mayo", 	
+            lugar: "Circuito de Miami Hard Rock Stadium", 
+            longitud_pista:	"5.410 km", 	
+            vueltas: 57, 
+            curvas:	27 
+        },
+        {
+            nombre: "Gran Premio de China 2024", 
+            fecha:	"Jueves, 18 de abril", 	
+            lugar: "Circuito Internacional de Shanghái", 
+            longitud_pista:	"5.451 km", 	
+            vueltas: 56, 
+            curvas:	16 
+        },
+        {
+            nombre: "Gran Premio de Japón 2024"	, 
+            fecha: "Jueves, 4 de abril", 	
+            lugar: "Circuito Internacional de Suzuka", 
+            longitud_pista:	"5.807 km", 	
+            vueltas: 53, 
+            curvas:	18 
+        },
+        {
+            nombre: "Gran Premio de Australia 2024", 
+            fecha:	"Jueves, 24 de marzo", 	
+            lugar: "Circuito de Albert Park, Melbourne", 
+            longitud_pista:	"5.303 km", 	
+            vueltas: 58, 
+            curvas:	16 
+        },
+        {
+            nombre: "Gran Premio de Arabia Saudita 2024", 
+            fecha: "Miércoles, 9 de marzo",  	
+            lugar: "Circuito callejero de Jeddah", 
+            longitud_pista:	"6.174 km", 	
+            vueltas: 50, 
+            curvas:	27 
+        },
+
+    ]
+)
+
+db.resultados.insert(
+    [
+
+        {
+            carrera: "Gran Premio de Miami 2024", 
+            piloto:	"Lando Norris", 
+            tiempo:	"1:30:49.876", 	
+            posicion:1, 
+            puntos:	25, 
+            equipo:	"MCLAREN"
+        },
+        {
+            carrera: "Gran Premio de Miami 2024", 
+            piloto:	"Max Verstappen", 
+            tiempo:	"+00:07.612",  	
+            posicion:2, 
+            puntos:	18, 
+            equipo:	"RED BULL"
+        },
+        {
+            carrera: "Gran Premio de Miami 2024", 
+            piloto:	"Charles Leclerc", 
+            tiempo:	"+00:09.920",  	
+            posicion:3, 
+            puntos:	15, 
+            equipo:	"FERRARI"
+        },
+        {
+            carrera: "Gran Premio de Miami 2024", 
+            piloto:	"Sergio Pérez", 
+            tiempo:	"+00:14.650",  	
+            posicion:4, 
+            puntos:	12, 
+            equipo:	"RED BULL"
+        },
+        {
+            carrera: "Gran Premio de Miami 2024", 
+            piloto:	"Carlos Sainz", 
+            tiempo:	"+00:16.407",  	
+            posicion:5, 
+            puntos:	10, 
+            equipo:	"FERRARI"
+        },
+        {
+            carrera: "Gran Premio de China 2024", 
+            piloto:	"Max Verstappen", 
+            tiempo:	"1:40:52.554", 	
+            posicion:1, 
+            puntos:	25, 
+            equipo:	"RED BULL"
+        },
+        {
+            carrera: "Gran Premio de China 2024", 
+            piloto:	"Lando Norris", 
+            tiempo:	"+00:13.773",  	
+            posicion:2, 
+            puntos:	18, 
+            equipo:	"MCLAREN"
+        },
+       
+        {
+            carrera: "Gran Premio de China 2024", 
+            piloto:	"Sergio Pérez", 
+            tiempo:	"+00:19.160",  	
+            posicion:3, 
+            puntos:	15, 
+            equipo:	"RED BULL"
+        },
+        {
+            carrera: "Gran Premio de China 2024", 
+            piloto:	"Charles Leclerc", 
+            tiempo:	"+00:23.623",  	
+            posicion:4, 
+            puntos:	12, 
+            equipo:	"FERRARI"
+        },
+        {
+            carrera: "Gran Premio de China 2024", 
+            piloto:	"Carlos Sainz", 
+            tiempo:	"+00:33.983",  	
+            posicion:5, 
+            puntos:	10, 
+            equipo:	"FERRARI"
+        }
+    ]
+)
+
+db.resultados.find().pretty()
+db.resultados.updateMany({equipo:"MCLAREN"}, {$set:{equipo: "McLaren Racing Limited"}})
+db.resultados.updateMany({equipo:"RED BULL"}, {$set:{equipo: "Red Bull Racing"}})
+db.resultados.find().pretty()
+db.resultados.deleteMany({carrera: "Gran Premio de China 2024"})
+db.resultados.find().pretty()
